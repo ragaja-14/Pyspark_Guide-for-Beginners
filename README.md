@@ -21,6 +21,7 @@ process on it.
 - A job is split into multiple taks by the SparkContext and tasks are executed by the executors in worker nodes.
 ##### Internal flow
 The Sparkcontext implicitly converts the user written code with transformations and actions to DAG . The DAG is is further converted as a exection plan by the driver program and assigns tasks to specific worker nodes.The driver program negotiates with cluster manager for allocation of resources at worker nodes inorder to perform the tasks assigned.The cluster manager launches the executors on worker nodes which are registered at the driver program and then perform the computation.The results and status from executors is sent back to the driver program.
+
 ---
 
 SparkContext is compatible with various types of cluster manager that include -Standalone Cluster Mnager, YARN(Yet Another Resource Navigator), Mesos.
