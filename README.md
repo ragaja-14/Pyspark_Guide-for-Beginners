@@ -18,8 +18,14 @@ The Spark Architecture follows a Master-Slave architecture where each cluster ha
 spark functionalities.
 - The driver program splits the input data into partitions and distributes it across worker nodes to
 process on it.
-- A job is split into multiple taks by the SparkContext(in driver program) and tasks are 
+- A job is split into multiple taks by the SparkContext and tasks are executed by the executors in worker nodes.
+##### Internal flow
+The Sparkcontext implicitly converts the user written code with transformations and actions to DAG . The DAG is is further converted as a exection plan by the driver program and assigns tasks to specific worker nodes.The driver program negotiates with cluster manager for allocation of resources at worker nodes inorder to perform the tasks assigned.The cluster manager launches the executors on worker nodes which are registered at the driver program and then perform the computation.The results and status from executors is sent back to the driver program.
+---
 
+SparkContext is compatible with various types of cluster manager that include -Standalone Cluster Mnager, YARN(Yet Another Resource Navigator), Mesos.
 #### PySpark Using Colab
 To work with PySpark on local machine needs Java, Scala, Py4j library etc and several other software to be installed so instead PySpark on Google Colab is better alternative when the data used is mounted on drive.
 #### RDD - Resilient Distributed Datasets
+RDD is the basic data structure in Spark which is immutable and fault-tolerant in nature.
+
