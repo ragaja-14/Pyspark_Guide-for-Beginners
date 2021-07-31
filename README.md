@@ -9,6 +9,9 @@ transformations are applied on data instead of execution, a Directed Acyclic gra
 in spark and execution is done only when an action is triggered.).
 The Spark Architecture follows a Master-Slave architecture where each cluster has
  a Master Node(Driver), multiple worker nodes(slaves) and a cluster manager.
+ 
+ ![Flow Diagram](spark_arch.png)
+ 
 - The Master node has a driver program which schedules the jobs, negotiates with
  cluster manager for allocation of resources.
 - After the Spark initalization a Spark context is created by the driver prgram that handles all 
