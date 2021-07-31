@@ -24,7 +24,7 @@ The Sparkcontext implicitly converts the user written code with transformations 
 
 ---
 
-SparkContext is compatible with various types of cluster manager that include -Standalone Cluster Mnager, YARN(Yet Another Resource Navigator), Mesos.
+SparkContext is compatible with various types of cluster manager that include -Standalone Cluster Manager, YARN(Yet Another Resource Navigator), Mesos.
 #### PySpark Using Colab
 To work with PySpark on local machine needs Java, Scala, Py4j library etc and several other software to be installed so instead PySpark on Google Colab is better alternative when the data used is mounted on drive.
 #### RDD - Resilient Distributed Datasets
