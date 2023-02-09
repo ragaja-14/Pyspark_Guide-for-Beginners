@@ -5,10 +5,10 @@ Apache Spark is an open source framework that allows to perform large scale real
 #### Spark Architecture
 The major features of spark that support high speed real-time data processing are the
 parallel processing of distributed data, in-memory computation abiltity and lazy evaluations(when a set of 
-transformations are applied on data instead of execution, a Directed Acyclic graph[DAG] is generated
-in spark and execution is done only when an action is triggered.).
+transformations are applied on data, instead of execution- a Directed Acyclic graph[DAG] is generated
+in spark and execution is done only when any action is triggered.).
 The Spark Architecture follows a Master-Slave architecture where each cluster has
- a Master Node(Driver), multiple worker nodes(slaves) and a cluster manager.
+ a Master Node(Driver), multiple Slave nodes(Workers) and a cluster manager.
  
  ![Flow Diagram](spark_arch.png)
  
