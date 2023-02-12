@@ -34,6 +34,6 @@ RDD is the basic data structure in Spark which is immutable and fault-tolerant i
 These operations when used alone do not produce any result to be returned.
 - Action operation : reduce(), collect(), count(), show()
 These invoked processing and return a result after execution.
-![RDD spark](rdd_spark.png)
+![RDD spark](rdd_spark_1.png)
 
 
