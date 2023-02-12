@@ -28,5 +28,12 @@ SparkContext is compatible with various types of cluster manager that include -S
 #### PySpark Using Colab
 To work with PySpark on local machine needs Java, Scala, Py4j library etc and several other software to be installed so instead PySpark on Google Colab is better alternative when the data used is mounted on drive.
 #### RDD - Resilient Distributed Datasets
-RDD is the basic data structure in Spark which is immutable and fault-tolerant in nature.
+RDD is the basic data structure in Spark which is immutable and fault-tolerant in nature. It is immutable data structure and it is logically partitioned across multiple nodes in the cluster to support parallel processing. Since it is immutable for each transformation operation that update any values or schema details create a new RDD instead of applying changes. These transformations are only processed when an action operation that returns result is invoked.
+
+- Transformation operation : map(), filter(), orderBy(), groupBy() etc
+These operations when used alone do not produce any result to be returned.
+- Action operation : reduce(), collect(), count(), show()
+These invoked processing and return a result after execution.
+![RDD spark](rdd_spark.png)
+
 
